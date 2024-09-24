@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Table, Col, Row, Form, Container, FormGroup, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-import { OpenLibraryPostableBook, PuttableBook } from "./Book"
+import { OpenLibraryPostableBook } from "./Book"
 
 interface IOpenLibraryBook {
   title: string,
@@ -25,8 +25,10 @@ export default function OpenLibraryBooks() {
       title: book.title,
       authorName: book.author_name,
       publisherName: book.publishers[0],
-      isbn: book.isbns[0]};
-      axios.post('/api/Books/OpenLibrary', book).then((response) => navigate(`/book/${response.data.bookId}`));
+      isbn: book.isbns[0]
+      };
+
+      axios.post('/api/Books/OpenLibrary', newBook).then((response) => navigate(`/book/${response.data.bookId}`));
   }
 
   const handleSearch = async (event: FormEvent) => {

@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { FormEvent, useEffect, useState } from 'react';
-import { Form, Container, FormGroup, Button, Row, Col } from 'react-bootstrap';
+import { Form, Container, FormGroup, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import { Publisher, populatePublishers } from '../../services/Publisher';
-import { Author, populateAuthors } from '../../services/Author';
+import { Publisher } from '../../services/Publisher';
+import { Author } from '../../services/Author';
 
 export interface ISimpleBook {
     bookId: string;

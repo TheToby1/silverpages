@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ShelfObject } from './Shelf';
-import { BookObject } from './Book';
 
 export interface BookItemObject {
     bookId: string;

@@ -1,0 +1,14 @@
+services:
+    silver-pages:
+        build:
+            context: ../
+            dockerfile: SilverPages.Server/Dockerfile
+            target: final
+        container_name: silver-pages
+        ports:
+            - ${ASPNETCORE_HTTP_PORT}:${ASPNETCORE_HTTP_PORT}
+        environment:
+            - ASPNETCORE_URLS:${ASPNETCORE_URLS}
+            - ASPNETCORE_HTTP_PORT:${ASPNETCORE_HTTP_PORT}
+        restart: unless-stopped
+        
