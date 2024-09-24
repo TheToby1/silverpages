@@ -13,7 +13,7 @@ using SilverPages.Server.Model;
 
 namespace SilverPages.Server.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     [Authorize]
     public class ShelvesController : ControllerBase

@@ -44,8 +44,6 @@ namespace SilverPages.Server
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseAuthentication();
-            app.UsePathBase("/api");
-            app.UseRouting();
 
             var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
             using (var scope = scopeFactory.CreateScope())

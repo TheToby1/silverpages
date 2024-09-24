@@ -14,7 +14,7 @@ namespace SilverPages.Server.Controllers
 {
     public record PaginatedResponse<T>(long count, IEnumerable<T> data);
 
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class BooksController : ControllerBase
     {
